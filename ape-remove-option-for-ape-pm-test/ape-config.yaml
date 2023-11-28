@@ -1,0 +1,43 @@
+name: Raise-warnings-if-value
+plugins:
+  - name: solidity
+  - name: alchemy
+  - name: foundry
+ethereum:
+  default_network: mainnet-fork
+  mainnet_fork:
+    default_provider: foundry
+    transaction_acceptance_timeout: 99999999
+  mainnet:
+    transaction_acceptance_timeout: 99999999
+# ganache:
+#   fork:
+#     ethereum:
+#       mainnet:
+#         upstream_provider: alchemy
+foundry:
+  host: auto
+  fork:
+    ethereum:
+      mainnet:
+        upstream_provider: alchemy
+dependencies:
+  # - name: Uniswap-periphery
+  #   github: uniswap/v3-periphery
+  #   ref: 1.3.0
+  - name: Uniswap-core
+    github: uniswap/v3-core
+    ref: 1.0.0
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.9.3
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.9.0
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.9.1
+test:
+  mnemonic: test test test test test test test test test test test junk
+  number_of_accounts: 10
+

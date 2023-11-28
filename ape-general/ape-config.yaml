@@ -1,0 +1,5 @@
+plugins:
+  - name: alchemy 
+  - name: solidity 
+  - name: foundry 
+  - name: etherscan 

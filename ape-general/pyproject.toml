@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "Flash_loan_arbritage"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "Flash_loan_arbritage"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+eth-ape = "*"
+ape-alchemy = "*"
+ape-solidity= "*"
+ape-foundry = "*"
+ape-etherscan = "*"
+# plugin = "*" # get the latest one
+uniswap-python = "^0.7.0"
+colorama = "^0.4.6"
+tqdm = "^4.66.1"
+loguru = "^0.7.0"
+#multicall = "*" # break other web libraries
+pathos = "^0.3.1"
+ethpm-types = "^0.5.4"
+
+black = ">=23.7.0,<24"  # Auto-formatter and linter
+mypy = ">=1.5.1,<2"  # Static type analyzer
+types-PyYAML = "*"  # Needed due to mypy typeshed
+types-requests = "*"  # Needed due to mypy typeshed
+types-setuptools = "*"  # Needed due to mypy typeshed
+pandas-stubs = "1.2.0.62"  # Needed due to mypy typeshed
+types-SQLAlchemy = "1.4.49"  # Needed due to mypy typeshed
+flake8 = ">=6.1.0,<7"  # Style linter
+isort = ">=5.10.1,<6"  # Import sorting linter
+mdformat = ">=0.7.17"  # Auto-formatter for markdown
+mdformat-pyproject = ">=0.0.1"  # Allows configuring in pyproject.toml
+mdformat-gfm = ">=0.3.5"
+mdformat-frontmatter = ">=0.4.1"
+
+[tool.ape.plugins]
+ape-alchemy = "*"
+ape-solidity = "*"
+ape-foundry = "*"
+ape-etherscan = "*"
+
+[tool.ape.network]
+ecosystem = "ethereum"
+default_network = "mainnet-fork"
+default_provider = "foundry"
+
+[tool.ape.tests]
+mnemonic = "test test test test test test test test test test test junk"
+number_of_test_accounts = 10
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

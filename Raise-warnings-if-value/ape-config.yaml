@@ -1,0 +1,28 @@
+name: Raise-warnings-if-value
+plugins:
+  - name: solidity
+  - name: alchemy
+  - name: foundry
+  - name: ganache
+ethereum:
+  default_network: mainnet-fork
+  mainnet_fork:
+    default_provider: foundry
+    transaction_acceptance_timeout: 99999999
+  mainnet:
+    transaction_acceptance_timeout: 99999999
+ganache:
+  fork:
+    ethereum:
+      mainnet:
+        upstream_provider: alchemy
+foundry:
+  host: auto
+  fork:
+    ethereum:
+      mainnet:
+        upstream_provider: alchemy
+test:
+  mnemonic: test test test test test test test test test test test junk
+  number_of_accounts: 10
+
