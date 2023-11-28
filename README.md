@@ -1,5 +1,12 @@
 # Ape Contributions
 
+## How to follow
+1. Clone the Repo.
+2. Go to any dir & do `poetry install && poetry shell` to activate the virtual env.
+3. Check by doing `which python` to see if the env is activated.(I have faced this issue. Poetry needs to do `poetry shell` 2-3 times)
+4. Do your regular `pip install` stuffs.
+5. That's it.
+
 | Directory | Link |
 | --- | --- |
 | ape-general | [Link](./ape-general) |
